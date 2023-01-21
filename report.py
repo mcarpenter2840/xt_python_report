@@ -6,7 +6,7 @@ parser.add_argument("-p","--product-master",help="Path to the product master fil
 parser.add_argument("-s","--sales",help="Path to the sales file",type=str)
 parser.add_argument("-tr","--team-report",help="Path to the team report",type=str)
 parser.add_argument("-pr","--product-report",help="Path to the product report",type=str)
-parser.add_argument("-h","--help",help="Display help")
+parser.add_argument("-h",help="Display help")
 
 args = parser.parse_args()
 
