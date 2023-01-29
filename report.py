@@ -1,22 +1,18 @@
-def main(args):
-    #team_report = args.team_report
-    #product_report = args.product_report
-
-    teams = get_teams(args.team_map)
-    print(teams)
-
+def main(args):    
     products = get_products(args.product_master)
     print(products)
 
     sales = get_sales(args.sales)
     print(sales)
 
+    teams = get_teams(args.team_map)
+    print(teams)
+
 
 def get_teams(path):
     mylist = []
     teams = open(path, "r")
     for t in teams:
-        #print(t)
         item = t.split(",")
         my_team = Team(item[0],item[1])
         mylist.append(my_team)
@@ -52,6 +48,7 @@ class Team:
         self.id = id
         self.name = name
 
+
 class Sale:
     def __init__(self,sale_id,product_id,team_id,quantity,discount):
         self.sale_id = sale_id
@@ -59,6 +56,7 @@ class Sale:
         self.team_id = team_id
         self.quantity = quantity
         self.discount = discount
+
 
 import sys, argparse
 
